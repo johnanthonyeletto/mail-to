@@ -15,6 +15,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Trusted publishing must be set for this exact repo on npm
+      - name: Debug – repo identity
+        run: |
+          echo "GITHUB_REPOSITORY=$GITHUB_REPOSITORY"
+          echo "On npm, Trusted publishing → Workflow filename must be: publish.yml"
+          echo "Repository on npm must match: $GITHUB_REPOSITORY"
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
