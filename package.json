@@ -1,12 +1,12 @@
 {
-  "name": "mail-to",
+  "name": "@johnanthonyeletto/mail-to",
   "version": "1.0.1",
   "description": "mailto: links that don't suck. Detect email provider from MX records and open the right compose URL (Gmail, Outlook, Zoho, Proton) or fall back to mailto:.",
   "license": "ISC",
   "author": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/johneletto/mail-to"
+    "url": "git+https://github.com/johneletto/mail-to.git"
   },
   "keywords": [
     "mailto",
