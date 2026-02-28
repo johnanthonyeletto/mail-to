@@ -92,6 +92,24 @@ Or copy `dist/index.js` to your project and reference it.
 | `npm run build` | Build ESM, CJS, and IIFE to `dist/`. |
 | `npm run dev`   | Build in watch mode.                 |
 
+## Publishing
+
+Releases are published to npm via [GitHub Actions](.github/workflows/publish.yml) when you push a version tag. Publishing uses [npm Trusted Publishing](https://docs.npmjs.com/trusted-publishers) (OIDC); no `NPM_TOKEN` secret is required.
+
+### Releasing a new version
+
+1. Bump the version and create a tag:
+   ```bash
+   npm version patch   # or minor / major
+   ```
+2. Push the tag to trigger the workflow:
+   ```bash
+   git push --follow-tags
+   ```
+   Or push a specific tag: `git push origin v1.0.0`.
+
+The workflow runs on tag push, builds the package, and publishes to npm.
+
 ## License
 
 ISC
