@@ -37,4 +37,4 @@ jobs:
       # Trusted publishing (OIDC) – no NPM_TOKEN needed. Configure at:
       # npmjs.com → Your package → Settings → Trusted publishing
       - name: Publish to npm
-        run: npm publish --provenance --access public
+        run: npm publish
