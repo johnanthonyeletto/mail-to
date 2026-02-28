@@ -1,6 +1,6 @@
 {
   "name": "@johnanthonyeletto/mail-to",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "mailto: links that don't suck. Detect email provider from MX records and open the right compose URL (Gmail, Outlook, Zoho, Proton) or fall back to mailto:.",
   "license": "ISC",
   "author": "",
