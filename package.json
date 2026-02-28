@@ -1,0 +1,43 @@
+{
+  "name": "mail-to",
+  "version": "1.0.1",
+  "description": "mailto: links that don't suck. Detect email provider from MX records and open the right compose URL (Gmail, Outlook, Zoho, Proton) or fall back to mailto:.",
+  "license": "ISC",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johneletto/mail-to"
+  },
+  "keywords": [
+    "mailto",
+    "email",
+    "compose",
+    "gmail",
+    "outlook",
+    "mx",
+    "dns"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}

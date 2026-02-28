@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <h1><code>mailto:</code> links that don't suck</h1>
+      <label for="email-input"
+        >Enter your email (simulate the user's email address)</label
+      >
+      <input
+        type="email"
+        id="email-input"
+        placeholder="Enter your email (simulate user email address)"
+        value="test@example.com"
+      />
+
+      <button id="btn">Contact Support</button>
+    </main>
+    <script src="dist/index.js"></script>
+    <script>
+      document.getElementById("btn").addEventListener("click", async () => {
+        const email = document.getElementById("email-input").value;
+        const mailto = await MailTo.compose({
+          from: email,
+          to: "test@example.com",
+          subject: "Test email",
+          body: "This is a test email",
+        });
+
+        window.open(mailto, "_blank");
+      });
+    </script>
+  </body>
+</html>
